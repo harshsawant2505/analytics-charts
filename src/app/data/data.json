@@ -1,0 +1,90 @@
+{
+    "userId": "user_12345",
+    "userName": "John Doe",
+    "email": "johndoe@example.com",
+    "analytics": {
+      "sessions": 1350,
+      "prevsessions": 980,
+      "pageViews": 150,
+      "prevpageViews": 157,
+      "averageSessionDuration": "5m 30s",
+      "prevaverageSessionDuration": "5m 30s",
+      "bounceRate": 35,
+      "prevbounceRate": 31,
+      "startDate": "January 1, 2024",
+      "currentDate": "October 1, 2024",
+      "conversions": {
+        "total": 5,
+        "conversionRate": "3.33%",
+        "goals": [
+          {
+            "goalId": "goal_1",
+            "goalName": "Sign Up",
+            "completions": 2
+          },
+          {
+            "goalId": "goal_2",
+            "goalName": "Purchase",
+            "completions": 3
+          }
+        ]
+      },
+      "trafficSources": {
+        "organicSearch": 50,
+        "direct": 40,
+        "referral": 30,
+        "social": 20,
+        "email": 10
+      },
+    
+      "deviceUsage": {
+        "month":[
+          { "desktop": 2300, "mobile": 1150 },
+         { "desktop": 186, "mobile": 80 },
+         { "desktop": 2000, "mobile": 150 },
+         { "desktop": 200, "mobile": 100 },
+          { "desktop": 400, "mobile": 200 },
+          { "desktop": 1900, "mobile": 950 },
+          { "desktop": 500, "mobile": 250 },
+          { "desktop": 1300, "mobile": 650 },
+          { "desktop": 2000, "mobile": 1000 },
+          { "desktop": 700, "mobile": 350 },
+          { "desktop": 1200, "mobile": 600 },
+          { "desktop": 600, "mobile": 300 },
+          { "desktop": 900, "mobile": 450 },
+          { "desktop": 800, "mobile": 400 },
+          { "desktop": 1000, "mobile": 500 },
+          { "desktop": 1100, "mobile": 550 },
+          { "desktop": 1400, "mobile": 700 },
+          { "desktop": 2100, "mobile": 1050 },
+          { "desktop": 1500, "mobile": 750 },
+          { "desktop": 1600, "mobile": 800 },
+          { "desktop": 1700, "mobile": 850 },
+          { "desktop": 2400, "mobile": 1200 },
+          { "desktop": 1800, "mobile": 900 },
+          { "desktop": 2200, "mobile": 1100 }
+          
+       
+          
+        ]
+       
+      },
+      "geolocation": {
+        "country": "United States",
+        "city": "New York"
+      },
+      "events": [
+        {
+          "eventId": "event_1",
+          "eventName": "Clicked CTA Button",
+          "eventCount": 10
+        },
+        {
+          "eventId": "event_2",
+          "eventName": "Viewed Product Page",
+          "eventCount": 15
+        }
+      ]
+    }
+  }
+  
