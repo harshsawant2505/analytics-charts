@@ -1,6 +1,6 @@
 
 "use client"
-import React, { useState } from 'react'
+import React, { use, useState } from 'react'
 
 import axios from 'axios' 
 import { useEffect } from 'react'
@@ -30,6 +30,10 @@ import Loading from './loading';
 import { FaceIcon } from '@radix-ui/react-icons';
 
 import moment from 'moment';
+import { useRouter } from 'next/router';
+import PseudoCard from '../components/pseudoCard';
+import PseudoChartBar from '../components/pseudoChartBar';
+import PseudoPieChart from '../components/PseudoPieChart';
 
 
 
@@ -150,13 +154,14 @@ function Analytics() {
 
   const searchParams = useSearchParams()
   
-  const startDate = searchParams.get('start')
-  const endDate = searchParams.get('end')
+  const startDate:any = searchParams.get('start')
+  const endDate:any = searchParams.get('end')
+  
+  const momentstart = moment(new Date(startDate))
+  const momentend = moment(new Date(endDate))
 
-
-// Format the date to get the month name and year
-const formattedStartDate = moment(startDate).format('MMMM, D YYYY');
-const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
+const formattedStartDate = momentstart.format('MMMM, D YYYY');
+const formattedEndDate = momentend.format('MMMM, D YYYY');
 
   const [data, setData] = useState<UserData>();
   const [sessions, setsessions] = useState<sessionsData[]>();
@@ -175,22 +180,55 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
     const fetchData = async () => {
       try {
         const response1 = await axios.get('/api/getSesions');
-        const response2 = await axios.get('/api/getPageViews');
-        const response3 = await axios.get('/api/getSessionDuration');
-        const response4 = await axios.get('/api/getBounce');
-   
         setsessions(response1.data.sessions)
         console.log(response1.data)
-        setpageviews(response2.data.pageviews)
-        console.log(response2.data)
-        setsessionduration(response3.data.sessionduration)
-        console.log(response3.data)
-        setbouncerate(response4.data.bouncerate)
-        console.log(response4.data)
+       
+        
+      
 
-        if(response1.data && response2.data && response3.data && response4.data){
-            getCharts()
-        }
+        setTimeout(() => {
+          getduration()
+          async function getduration(){
+            const response3 = await axios.get('/api/getSessionDuration');
+            setsessionduration(response3.data.sessionduration)
+            console.log(response3.data)
+          }
+        }, 1000);
+
+        setTimeout(() => {
+          getpageviews()
+          async function getpageviews(){
+            const response2 = await axios.get('/api/getPageViews');
+            setpageviews(response2.data.pageviews)
+            console.log(response2.data);
+            
+          }
+        }, 2000);
+
+        setTimeout(() => {
+          getbounce()
+          async function getbounce(){
+
+            const response4 = await axios.get('/api/getBounce');
+            setbouncerate(response4.data.bouncerate)
+            console.log(response4.data);
+            
+          }
+      
+        }, 3000);
+
+
+        setTimeout(() => {
+          getCharts()
+        }, 4000);
+     
+   
+       
+      
+       
+       
+
+     
 
       } catch (error:any) {
         console.log(error.message)
@@ -199,6 +237,7 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
         
     }
     useEffect(() => {
+      console.log(momentstart)
       console.log(formattedStartDate)
       console.log(formattedEndDate)
       getCurrentMonth()
@@ -208,16 +247,24 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
 
    async function getCharts(){
       try {
+ 
         const response1 = await axios.get('/api/getDeviceUsage')
-        const response2 = await axios.get('/api/getTrafficSources')
         setdeviceusage(response1.data.deviceusage)
         console.log(response1.data)
-        settrafficsources(response2.data.trafficsources)
-        console.log(response2.data)
+        setTimeout(() => {
+          getTrafficSources()
+          async function getTrafficSources(){
+            const response2 = await axios.get('/api/getTrafficSources')
+            settrafficsources(response2.data.trafficsources)
+           
+          }
+          
+        }, 1000);
+      
+       
+       
 
-        if(response1.data && response2.data){
-          setloaded(true)
-        }
+        
         
       } catch (error:any) {
         console.log(error.message)
@@ -228,7 +275,7 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
 
 
 
-    const datahero:any = trafficsources?trafficsources[getCurrentMonth()]:[{name: 'Organic Search', value: 1}, {name: 'Direct', value: 0}, {name: 'Email', value: 0}, {name: 'Referrals', value: 0}, {name: 'Social', value: 0}]
+    const datahero:any = trafficsources?trafficsources[getCurrentMonth()] : null;
   
 
     const chartData = deviceusage&&deviceusage.filter(record => {
@@ -262,15 +309,20 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
       `${Intl.NumberFormat('us').format(number).toString()} searches`;
 
     const [ loaded, setloaded ] = useState(false);
+
+    useEffect(() => {
+      if (pageViews) {
+        setloaded(true);
+      }
+    }, [pageViews]);
+    
     
    
     
-  if (!loaded) {
-      return <Loading />;
-  }else{
+
   return (
     <div className='bg-gray-100 w-full min-h-screen text-black flex p-2'>
-
+      
       <div className='bg-transparent flex w-full gap-2'>
 
 
@@ -341,10 +393,10 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
 
           <div className='bg-transparent  p-5 flex flex-wrap gap-3'>
 
-            <Card title='Sessions' main={sessions?sessions[getCurrentMonth()].currentSessions:0}  tagline = "vs prev month" percentage = {sessions?(sessions[getCurrentMonth()].currentSessions - sessions[getCurrentMonth()].previousSessions)/sessions[getCurrentMonth()].previousSessions:0}/>
-            <Card title='Page Views' main={pageViews?pageViews[getCurrentMonth()].currentPageViews:0} tagline = "vs prev month" percentage = {pageViews?(pageViews[getCurrentMonth()].currentPageViews - pageViews[getCurrentMonth()].previousPageViews)/pageViews[getCurrentMonth()].previousPageViews:0}  />
-            <Card title='Average Session Duration' main={sessionduration?sessionduration[getCurrentMonth()].currentAverageSessionDuration:'' } tagline = "vs prev month" percentage = 'none'  />
-            <Card title='Bounce Rate' main={bouncerate?bouncerate[getCurrentMonth()].currentBounceRate:0} tagline = "vs prev month" percentage = {bouncerate?(bouncerate[getCurrentMonth()].currentBounceRate - bouncerate[getCurrentMonth()].previousBounceRate)/bouncerate[getCurrentMonth()].previousBounceRate:0} />
+            {sessions?<Card title='Sessions' main={sessions?sessions[getCurrentMonth()].currentSessions:0}  tagline = "vs prev month" percentage = {sessions?(sessions[getCurrentMonth()].currentSessions - sessions[getCurrentMonth()].previousSessions)/sessions[getCurrentMonth()].previousSessions:0}/>:<PseudoCard />}
+           {pageViews?<Card title='Page Views' main={pageViews&&pageViews[getCurrentMonth()].currentPageViews} tagline = "vs prev month" percentage = {pageViews?(pageViews[getCurrentMonth()].currentPageViews - pageViews[getCurrentMonth()].previousPageViews)/pageViews[getCurrentMonth()].previousPageViews:0}  />:<PseudoCard />}
+            {sessionduration?<Card title='Average Session Duration' main={sessionduration?sessionduration[getCurrentMonth()].currentAverageSessionDuration:'' } tagline = "vs prev month" percentage = 'none'  />:<PseudoCard />}
+            {bouncerate?<Card title='Bounce Rate' main={bouncerate?bouncerate[getCurrentMonth()].currentBounceRate:0} tagline = "vs prev month" percentage = {bouncerate?(bouncerate[getCurrentMonth()].currentBounceRate - bouncerate[getCurrentMonth()].previousBounceRate)/bouncerate[getCurrentMonth()].previousBounceRate:0} />: <PseudoCard />}
            
 
             <div className='w-[40%] h-[300px]   p-0 flex flex-col justify-between items-center bg-white rounded-sm'>
@@ -352,7 +404,8 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
                 <h2 className='text-gray-500 text-sm mb-2'>Device Usage Desktop vs Mobile</h2>
                 <hr className='text-blacks w-[90%]' />
               </div>
-              <ChartContainer config={chartConfig} className="h-[200px] w-[80%]">
+              
+              {chartData?<ChartContainer config={chartConfig} className="h-[200px] w-[80%]">
                 <BarChart accessibilityLayer data={chartData}>
                   <XAxis
                     dataKey="startDate"
@@ -365,8 +418,9 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
                   <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
                   <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
                 </BarChart>
-              </ChartContainer>
+              </ChartContainer>:<PseudoChartBar/>}
             </div>
+            
             
 
             <div className="flex flex-col items-center gap-1 justify-start  w-[350px] bg-white rounded-sm border">
@@ -374,7 +428,7 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
                 <h2 className='text-gray-500 text-sm mb-2'>Traffic Sources</h2>
                 <hr className='text-blacks w-[90%]' />
               </div>
-              <DonutChart
+              {datahero?<DonutChart
                 data={datahero}
                 category="value"
                 index="name"
@@ -382,7 +436,8 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
                 variant="donut"
                 colors={['blue', 'cyan', 'indigo', 'violet', 'fuchsia']}
                 className="w-40 "
-              />
+              />:<PseudoPieChart/>}
+              
               <Legend
               categories={['Organic Search', 'Direct', 'Referrals', 'Social', 'Email']}
               colors={['blue', 'cyan', 'indigo', 'violet', 'fuchsia']}
@@ -399,6 +454,6 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
     </div>
   )
 }
-}
+
 
 export default Analytics

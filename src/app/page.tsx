@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import Link  from 'next/link';
+import Link from 'next/link'
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
     <div className='w-full h-screen  bg-white  flex justify-center items-center'>
      
         <Link href={`/analytics?start=${startDate}&end=${endDate}`} className='bg-blue-500 px-5 py-4 rounded-sm text-white mt-7'>Go to Analytics Page</Link>
-      
+       
     </div>
   );
 }
