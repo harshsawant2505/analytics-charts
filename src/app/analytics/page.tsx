@@ -384,7 +384,7 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
                 className="w-40 "
               />
               <Legend
-              categories={['Organic Search', 'Direct', 'Email', 'Referrals', 'Social']}
+              categories={['Organic Search', 'Direct', 'Referrals', 'Social', 'Email']}
               colors={['blue', 'cyan', 'indigo', 'violet', 'fuchsia']}
               className="max-w-xs"
               />
