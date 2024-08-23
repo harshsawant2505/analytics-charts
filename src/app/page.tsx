@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { useEffect } from 'react';
 
 export default function Home() {
-  const startDate = (new Date(2024,0)).toLocaleDateString();
-  const endDate = (new Date()).toLocaleDateString();
+  const startDate = (new Date(2024,0));
+  const endDate = (new Date());
 
     useEffect(() => {
       console.log(startDate)
