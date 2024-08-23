@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export default function Home() {
   const startDate = (new Date(2024,0)).toLocaleDateString();
-  const endDate = (new Date(2024,7,31)).toLocaleDateString();
+  const endDate = (new Date()).toLocaleDateString();
 
     useEffect(() => {
       console.log(startDate)

@@ -234,7 +234,7 @@ const formattedEndDate = moment(endDate).format('MMMM, D YYYY');
     const chartData = deviceusage&&deviceusage.filter(record => {
       const recordStartDate = new Date(record.startDate);
       const recordEndDate = new Date(record.currentDate);
-      return recordStartDate >= new Date(formattedStartDate) && recordEndDate <= new Date(formattedEndDate);
+      return recordStartDate.getMonth() >= (new Date(formattedStartDate)).getMonth() && (recordEndDate).getMonth() <= (new Date(formattedEndDate)).getMonth();
     });
      
     
