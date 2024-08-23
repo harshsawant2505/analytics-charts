@@ -1,0 +1,75 @@
+[
+    {
+      "startDate": "January 1, 2024",
+      "currentDate": "January 31, 2024",
+      "currentAverageSessionDuration": "5m 30s",
+      "previousAverageSessionDuration": "5m 30s"
+    },
+    {
+      "startDate": "February 1, 2024",
+      "currentDate": "February 29, 2024",
+      "currentAverageSessionDuration": "6m 20s",
+      "previousAverageSessionDuration": "5m 30s"
+    },
+    {
+      "startDate": "March 1, 2024",
+      "currentDate": "March 31, 2024",
+      "currentAverageSessionDuration": "5m 50s",
+      "previousAverageSessionDuration": "6m 20s"
+    },
+    {
+      "startDate": "April 1, 2024",
+      "currentDate": "April 30, 2024",
+      "currentAverageSessionDuration": "6m 15s",
+      "previousAverageSessionDuration": "5m 50s"
+    },
+    {
+      "startDate": "May 1, 2024",
+      "currentDate": "May 31, 2024",
+      "currentAverageSessionDuration": "6m 30s",
+      "previousAverageSessionDuration": "6m 15s"
+    },
+    {
+      "startDate": "June 1, 2024",
+      "currentDate": "June 30, 2024",
+      "currentAverageSessionDuration": "7m 10s",
+      "previousAverageSessionDuration": "6m 30s"
+    },
+    {
+      "startDate": "July 1, 2024",
+      "currentDate": "July 31, 2024",
+      "currentAverageSessionDuration": "7m 25s",
+      "previousAverageSessionDuration": "7m 10s"
+    },
+    {
+      "startDate": "August 1, 2024",
+      "currentDate": "August 31, 2024",
+      "currentAverageSessionDuration": "7m 45s",
+      "previousAverageSessionDuration": "7m 25s"
+    },
+    {
+      "startDate": "September 1, 2024",
+      "currentDate": "September 30, 2024",
+      "currentAverageSessionDuration": "8m 00s",
+      "previousAverageSessionDuration": "7m 45s"
+    },
+    {
+      "startDate": "October 1, 2024",
+      "currentDate": "October 31, 2024",
+      "currentAverageSessionDuration": "8m 20s",
+      "previousAverageSessionDuration": "8m 00s"
+    },
+    {
+      "startDate": "November 1, 2024",
+      "currentDate": "November 30, 2024",
+      "currentAverageSessionDuration": "8m 35s",
+      "previousAverageSessionDuration": "8m 20s"
+    },
+    {
+      "startDate": "December 1, 2024",
+      "currentDate": "December 31, 2024",
+      "currentAverageSessionDuration": "9m 10s",
+      "previousAverageSessionDuration": "8m 35s"
+    }
+  ]
+  

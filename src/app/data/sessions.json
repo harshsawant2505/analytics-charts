@@ -1,0 +1,75 @@
+[
+    {
+      "startDate": "January 1, 2024",
+      "currentDate": "January 31, 2024",
+      "currentSessions": 1350,
+      "previousSessions": 980
+    },
+    {
+      "startDate": "February 1, 2024",
+      "currentDate": "February 29, 2024",
+      "currentSessions": 1200,
+      "previousSessions": 1350
+    },
+    {
+      "startDate": "March 1, 2024",
+      "currentDate": "March 31, 2024",
+      "currentSessions": 1400,
+      "previousSessions": 1200
+    },
+    {
+      "startDate": "April 1, 2024",
+      "currentDate": "April 30, 2024",
+      "currentSessions": 1300,
+      "previousSessions": 1400
+    },
+    {
+      "startDate": "May 1, 2024",
+      "currentDate": "May 31, 2024",
+      "currentSessions": 1500,
+      "previousSessions": 1300
+    },
+    {
+      "startDate": "June 1, 2024",
+      "currentDate": "June 30, 2024",
+      "currentSessions": 1500,
+      "previousSessions": 1300
+    },
+    {
+      "startDate": "July 1, 2024",
+      "currentDate": "July 31, 2024",
+      "currentSessions": 1600,
+      "previousSessions": 1500
+    },
+    {
+      "startDate": "August 1, 2024",
+      "currentDate": "August 31, 2024",
+      "currentSessions": 1700,
+      "previousSessions": 1600
+    },
+    {
+      "startDate": "September 1, 2024",
+      "currentDate": "September 30, 2024",
+      "currentSessions": 1800,
+      "previousSessions": 1700
+    },
+    {
+      "startDate": "October 1, 2024",
+      "currentDate": "October 31, 2024",
+      "currentSessions": 1900,
+      "previousSessions": 1800
+    },
+    {
+      "startDate": "November 1, 2024",
+      "currentDate": "November 30, 2024",
+      "currentSessions": 2000,
+      "previousSessions": 1900
+    },
+    {
+      "startDate": "December 1, 2024",
+      "currentDate": "December 31, 2024",
+      "currentSessions": 2100,
+      "previousSessions": 2000
+    }
+  ]
+  

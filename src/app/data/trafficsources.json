@@ -1,0 +1,87 @@
+[
+    [
+      { "name": "organicSearch", "value": 50 },
+      { "name": "direct", "value": 40 },
+      { "name": "referral", "value": 30 },
+      { "name": "social", "value": 20 },
+      { "name": "email", "value": 10 }
+    ],
+    [
+      { "name": "organicSearch", "value": 60 },
+      { "name": "direct", "value": 50 },
+      { "name": "referral", "value": 35 },
+      { "name": "social", "value": 25 },
+      { "name": "email", "value": 15 }
+    ],
+    [
+      { "name": "organicSearch", "value": 70 },
+      { "name": "direct", "value": 45 },
+      { "name": "referral", "value": 40 },
+      { "name": "social", "value": 30 },
+      { "name": "email", "value": 20 }
+    ],
+    [
+      { "name": "organicSearch", "value": 55 },
+      { "name": "direct", "value": 50 },
+      { "name": "referral", "value": 45 },
+      { "name": "social", "value": 35 },
+      { "name": "email", "value": 25 }
+    ],
+    [
+      { "name": "organicSearch", "value": 65 },
+      { "name": "direct", "value": 55 },
+      { "name": "referral", "value": 50 },
+      { "name": "social", "value": 40 },
+      { "name": "email", "value": 30 }
+    ],
+    [
+      { "name": "organicSearch", "value": 75 },
+      { "name": "direct", "value": 60 },
+      { "name": "referral", "value": 55 },
+      { "name": "social", "value": 45 },
+      { "name": "email", "value": 35 }
+    ],
+    [
+      { "name": "organicSearch", "value": 80 },
+      { "name": "direct", "value": 70 },
+      { "name": "referral", "value": 60 },
+      { "name": "social", "value": 50 },
+      { "name": "email", "value": 40 }
+    ],
+    [
+      { "name": "organicSearch", "value": 85 },
+      { "name": "direct", "value": 65 },
+      { "name": "referral", "value": 55 },
+      { "name": "social", "value": 60 },
+      { "name": "email", "value": 45 }
+    ],
+    [
+      { "name": "organicSearch", "value": 90 },
+      { "name": "direct", "value": 80 },
+      { "name": "referral", "value": 70 },
+      { "name": "social", "value": 55 },
+      { "name": "email", "value": 50 }
+    ],
+    [
+      { "name": "organicSearch", "value": 95 },
+      { "name": "direct", "value": 85 },
+      { "name": "referral", "value": 75 },
+      { "name": "social", "value": 65 },
+      { "name": "email", "value": 55 }
+    ],
+    [
+      { "name": "organicSearch", "value": 100 },
+      { "name": "direct", "value": 90 },
+      { "name": "referral", "value": 80 },
+      { "name": "social", "value": 70 },
+      { "name": "email", "value": 60 }
+    ],
+    [
+      { "name": "organicSearch", "value": 110 },
+      { "name": "direct", "value": 95 },
+      { "name": "referral", "value": 85 },
+      { "name": "social", "value": 75 },
+      { "name": "email", "value": 65 }
+    ]
+  ]
+  

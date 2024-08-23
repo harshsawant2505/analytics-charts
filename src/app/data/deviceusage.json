@@ -1,0 +1,75 @@
+[
+    {
+      "startDate": "January 1, 2024",
+      "currentDate": "January 31, 2024",
+      "desktop": 2300,
+      "mobile": 1150
+    },
+    {
+      "startDate": "February 1, 2024",
+      "currentDate": "February 29, 2024",
+      "desktop": 186,
+      "mobile": 80
+    },
+    {
+      "startDate": "March 1, 2024",
+      "currentDate": "March 31, 2024",
+      "desktop": 2000,
+      "mobile": 150
+    },
+    {
+      "startDate": "April 1, 2024",
+      "currentDate": "April 30, 2024",
+      "desktop": 200,
+      "mobile": 100
+    },
+    {
+      "startDate": "May 1, 2024",
+      "currentDate": "May 31, 2024",
+      "desktop": 400,
+      "mobile": 200
+    },
+    {
+      "startDate": "June 1, 2024",
+      "currentDate": "June 30, 2024",
+      "desktop": 1900,
+      "mobile": 950
+    },
+    {
+      "startDate": "July 1, 2024",
+      "currentDate": "July 31, 2024",
+      "desktop": 500,
+      "mobile": 250
+    },
+    {
+      "startDate": "August 1, 2024",
+      "currentDate": "August 31, 2024",
+      "desktop": 1300,
+      "mobile": 650
+    },
+    {
+      "startDate": "September 1, 2024",
+      "currentDate": "September 30, 2024",
+      "desktop": 2000,
+      "mobile": 1000
+    },
+    {
+      "startDate": "October 1, 2024",
+      "currentDate": "October 31, 2024",
+      "desktop": 700,
+      "mobile": 350
+    },
+    {
+      "startDate": "November 1, 2024",
+      "currentDate": "November 30, 2024",
+      "desktop": 1200,
+      "mobile": 600
+    },
+    {
+      "startDate": "December 1, 2024",
+      "currentDate": "December 31, 2024",
+      "desktop": 600,
+      "mobile": 300
+    }
+  ]
+  

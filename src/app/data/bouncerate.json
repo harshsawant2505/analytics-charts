@@ -1,0 +1,75 @@
+[
+    {
+      "startDate": "January 1, 2024",
+      "currentDate": "January 31, 2024",
+      "currentBounceRate": 35,
+      "previousBounceRate": 31
+    },
+    {
+      "startDate": "February 1, 2024",
+      "currentDate": "February 29, 2024",
+      "currentBounceRate": 30,
+      "previousBounceRate": 35
+    },
+    {
+      "startDate": "March 1, 2024",
+      "currentDate": "March 31, 2024",
+      "currentBounceRate": 32,
+      "previousBounceRate": 30
+    },
+    {
+      "startDate": "April 1, 2024",
+      "currentDate": "April 30, 2024",
+      "currentBounceRate": 34,
+      "previousBounceRate": 32
+    },
+    {
+      "startDate": "May 1, 2024",
+      "currentDate": "May 31, 2024",
+      "currentBounceRate": 29,
+      "previousBounceRate": 34
+    },
+    {
+      "startDate": "June 1, 2024",
+      "currentDate": "June 30, 2024",
+      "currentBounceRate": 28,
+      "previousBounceRate": 29
+    },
+    {
+      "startDate": "July 1, 2024",
+      "currentDate": "July 31, 2024",
+      "currentBounceRate": 31,
+      "previousBounceRate": 28
+    },
+    {
+      "startDate": "August 1, 2024",
+      "currentDate": "August 31, 2024",
+      "currentBounceRate": 29,
+      "previousBounceRate": 31
+    },
+    {
+      "startDate": "September 1, 2024",
+      "currentDate": "September 30, 2024",
+      "currentBounceRate": 30,
+      "previousBounceRate": 29
+    },
+    {
+      "startDate": "October 1, 2024",
+      "currentDate": "October 31, 2024",
+      "currentBounceRate": 26,
+      "previousBounceRate": 30
+    },
+    {
+      "startDate": "November 1, 2024",
+      "currentDate": "November 30, 2024",
+      "currentBounceRate": 28,
+      "previousBounceRate": 29
+    },
+    {
+      "startDate": "December 1, 2024",
+      "currentDate": "December 31, 2024",
+      "currentBounceRate": 27,
+      "previousBounceRate": 28
+    }
+  ]
+  

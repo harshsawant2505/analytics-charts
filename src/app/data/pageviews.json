@@ -1,0 +1,75 @@
+[
+    {
+      "startDate": "January 1, 2024",
+      "currentDate": "January 31, 2024",
+      "currentPageViews": 150,
+      "previousPageViews": 157
+    },
+    {
+      "startDate": "February 1, 2024",
+      "currentDate": "February 29, 2024",
+      "currentPageViews": 180,
+      "previousPageViews": 150
+    },
+    {
+      "startDate": "March 1, 2024",
+      "currentDate": "March 31, 2024",
+      "currentPageViews": 200,
+      "previousPageViews": 180
+    },
+    {
+      "startDate": "April 1, 2024",
+      "currentDate": "April 30, 2024",
+      "currentPageViews": 175,
+      "previousPageViews": 200
+    },
+    {
+      "startDate": "May 1, 2024",
+      "currentDate": "May 31, 2024",
+      "currentPageViews": 220,
+      "previousPageViews": 175
+    },
+    {
+      "startDate": "June 1, 2024",
+      "currentDate": "June 30, 2024",
+      "currentPageViews": 210,
+      "previousPageViews": 220
+    },
+    {
+      "startDate": "July 1, 2024",
+      "currentDate": "July 31, 2024",
+      "currentPageViews": 240,
+      "previousPageViews": 210
+    },
+    {
+      "startDate": "August 1, 2024",
+      "currentDate": "August 31, 2024",
+      "currentPageViews": 230,
+      "previousPageViews": 240
+    },
+    {
+      "startDate": "September 1, 2024",
+      "currentDate": "September 30, 2024",
+      "currentPageViews": 250,
+      "previousPageViews": 230
+    },
+    {
+      "startDate": "October 1, 2024",
+      "currentDate": "October 31, 2024",
+      "currentPageViews": 260,
+      "previousPageViews": 250
+    },
+    {
+      "startDate": "November 1, 2024",
+      "currentDate": "November 30, 2024",
+      "currentPageViews": 280,
+      "previousPageViews": 260
+    },
+    {
+      "startDate": "December 1, 2024",
+      "currentDate": "December 31, 2024",
+      "currentPageViews": 300,
+      "previousPageViews": 280
+    }
+  ]
+  
